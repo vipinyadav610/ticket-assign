@@ -29,7 +29,7 @@ const columns = props => {
         return (
           <Icon
             type="pushpin"
-            onClick={() => props.pm.onAssignTicketsClick(rowData)}
+            onClick={() => props.pm.onAssignModalToggle(rowData)}
           />
         )
       },

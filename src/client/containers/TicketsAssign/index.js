@@ -8,6 +8,7 @@ import columns from './columns'
 import { Button } from 'antd'
 import * as Actions from 'actions/tickets'
 import CreateTickets from './Modal/createTickets'
+import AssignTickets from './Modal/assignTickets'
 import './index.scss'
 
 const TicketsAssign = props => {
@@ -27,11 +28,12 @@ const TicketsAssign = props => {
         }
       />
       <ContainerLayout>
+        <AssignTickets {...props} />
         <CreateTickets {...props} />
         <TableContainer
           filterByFields={['name', 'email', 'phone', 'issue']}
           tableProps={{
-            dataSource: [],
+            dataSource: props.ticketsList,
             columns: columns(props),
             rowKey: (record, i) => i,
             bordered: true
@@ -42,7 +44,12 @@ const TicketsAssign = props => {
   )
 }
 
-export default presenter(store => ({ isVisible: false }), Actions)(
-  TicketsPM,
-  TicketsAssign
-)
+export default presenter(
+  store => ({
+    isCreateTicketModalOpen: store.tickets.isCreateTicketModalOpen,
+    ticketsList: store.tickets.ticketsList,
+    record: store.tickets.record,
+    agents: store.tickets.agents
+  }),
+  Actions
+)(TicketsPM, TicketsAssign)

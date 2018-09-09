@@ -33,7 +33,7 @@ const CreateTickets = props => {
   return (
     <Modal
       title="Create Tickets"
-      visible={props.isVisible}
+      visible={props.isCreateTicketModalOpen}
       footer={null}
       onCancel={props.pm.onCreateTicketsModalToggle(false)}
     >
