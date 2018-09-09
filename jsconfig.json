@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "experimentalDecorators": true,
+    "paths": {
+      "components/*": ["src/client/components/*"],
+      "actions/*": ["src/client/redux/actions/*"],
+      "constants/*": ["src/client/redux/constants/*"],
+      "middlewares/*": ["src/client/redux/middlewares/*"],
+      "reducers/*": ["src/client/redux/reducers/*"]
+
+      // selectors: path.join(__dirname, '../../src/client/redux/selectors'),
+      // store: path.join(__dirname, '../../src/client/redux/store'),
+      // service: path.join(__dirname, '../../src/client/redux/api/service'),
+      // initialState: path.join(__dirname, '../../src/client/redux/initialState'),
+      // hoc: path.join(__dirname, '../../src/client/hoc'),
+      // assets: path.join(__dirname, '../../src/client/assets'),
+      // constants: path.join(__dirname, '../../src/client/redux/constants'),
+      // routes: path.join(__dirname, '../../src/client/routes'),
+      // containers: path.join(__dirname, '../../src/client/containers')
+    }
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*"]
+}

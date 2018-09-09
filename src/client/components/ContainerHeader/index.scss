@@ -1,0 +1,19 @@
+.container-header {
+  padding: 15px 80px;
+  margin: -2.31rem;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  line-height: 50px;
+  border-bottom: 1px solid #e4e9f0;
+  display: flex;
+  justify-content: space-between;
+  .header-title {
+    font-size: 15px;
+    color: #dd1310;
+    text-transform: uppercase;
+    flex: 0.9;
+  }
+  .header-extra {
+    flex: 0.1;
+  }
+}

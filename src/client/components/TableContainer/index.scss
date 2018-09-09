@@ -1,0 +1,14 @@
+.table-container {
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .search-filter {
+    width: 250px;
+    margin-bottom: 20px;
+  }
+  .pagination-view {
+    text-align: right;
+    margin: 10px 0px 10px 0px;
+  }
+}
